@@ -1,0 +1,21 @@
+@@include('./meta/head.html')
+
+<body>
+	@@include('./components/cabinet-header.html')
+	<main>
+		<section class="cabinet">
+			<div class="container cabinet__container">
+				@@include('./components/admin-aside.html')
+				<div class="cabinet__content">
+					<h4 class="cabinet__title">Все записи</h4>
+					<div class="all-records">
+						<iframe src="https://calendar.google.com/calendar/embed?src=68u37tnh1039sfrlt32556a5r4%40group.calendar.google.com&ctz=Asia%2FYekaterinburg" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('meta/includeScripts.html')
+</body>
+
+</html>

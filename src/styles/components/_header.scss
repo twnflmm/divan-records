@@ -1,0 +1,89 @@
+.header {
+	position: fixed;
+	padding: 40px 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	color: $white;
+	transition: all .3s;
+
+	&__container {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		z-index: 1000;
+	}
+}
+
+.header-fixed {
+	position: fixed;
+	padding: 10px 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	background-color: $primary;
+	transition: all .3s ease-in-out;
+}
+
+.profile-dropbar {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	border-radius: 25px;
+	background-color: $greenLight;
+	transition: all .3s linear;
+
+	&__top {
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0 20px 0 10px;
+		color: $black;
+	}
+
+	&__avatar {
+		width: 40px;
+		height: 40px;
+		background-color: $primary;
+		border-radius: 50%;
+	}
+
+	&__bottom {
+		display: none;
+		transition: all .3s linear;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px;
+	}
+
+	&__item {
+		background-color: $primary;
+		border-radius: 30px;
+		width: 100%;
+	}
+
+	&__link {
+		display: block;
+		padding: 10px 20px;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	&:hover {
+		.profile-dropbar__bottom {
+			display: block;
+			transition: all .3s linear;
+		}
+	}
+}

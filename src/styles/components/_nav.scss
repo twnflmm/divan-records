@@ -1,0 +1,143 @@
+.nav {
+	&__list {
+		display: flex;
+		gap: 64px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 20px;
+		transition: color .3s;
+
+		&:hover {
+			color: $orange;
+			color: $orange;
+			transition: color .3s;
+		}
+
+		@media (max-width: $extraLarge) {
+			font-size: 18px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 16px;
+		}
+	}
+
+	@media (max-width: $medium) {
+		display: none;
+	}
+}
+
+.burger {
+	position: relative;
+	display: none;
+	height: 21px;
+	width: 40px;
+	z-index: 1000;
+	cursor: pointer;
+
+	span {
+		display: block;
+		height: 2px;
+		width: 100%;
+		background-color: $white;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $white;
+			transition: all .3s;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $white;
+			transition: all .3s;
+		}
+	}
+
+	&.active {
+		span {
+			height: 0;
+
+			&::before {
+				transform: rotate(45deg);
+				transform-origin: 15% 15%;
+				transition: all .3s;
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+				transform-origin: 15% 95%;
+				transition: all .3s;
+			}
+		}
+	}
+
+	@media (max-width: $medium) {
+		display: block;
+	}
+}
+
+.menu {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transform: translateX(100%);
+	background-color: $primary;
+	color: $mercury;
+	transition: transform 0.7s ease;
+
+	&__list {
+		display: flex;
+		gap: 40px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 28px;
+	}
+
+	&__button {
+		position: absolute;
+		border-radius: 32px;
+		left: 8%;
+		right: 8%;
+		bottom: 3%;
+		padding: 20px 0;
+		color: $primary;
+		background-color: $greenLight;
+	}
+
+	&.active {
+		transition: all 0.7s ease;
+		transform: translateX(0);
+	}
+
+	@media (min-width: 1040px) {
+		display: none;
+	}
+}

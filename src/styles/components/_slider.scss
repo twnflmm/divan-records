@@ -1,0 +1,164 @@
+.slider {
+	position: relative;
+	background-color: $greenLight;
+	padding: 140px 0 180px;
+
+	&__container {
+		max-width: 1050px;
+	}
+
+	&__text {
+		margin-bottom: 100px;
+
+		@media (max-width: $small) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title,
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 140%;
+
+		@media (max-width: $extraLarge) {
+			font-size: 18px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 16px;
+		}
+
+		@media (max-width: $medium) {
+			font-size: 14px;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__button-box {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 50%;
+		max-width: 50px;
+		max-height: 50px;
+		transform: translateY(-50%);
+
+		&.swiper-button-disabled {
+
+			line,
+			circle {
+				stroke: $secondary;
+			}
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: $extraLarge) {
+			left: 52%;
+			right: 52%;
+			top: unset;
+			bottom: -80px;
+			transform: unset;
+		}
+	}
+
+	&__prev {
+		left: -70px;
+
+		@media (max-width: $extraLarge) {
+			left: unset;
+		}
+	}
+
+	&__next {
+		right: -70px;
+
+		@media (max-width: $extraLarge) {
+			right: unset;
+		}
+	}
+
+	@media (max-width: $small) {
+		padding-top: 80px;
+		padding-bottom: 160px;
+	}
+
+	@media (max-width: $medium) {
+		padding-top: 100px;
+	}
+
+	@media (max-width: $small) {
+		padding-top: 80px;
+	}
+}
+
+.slide {
+	position: relative;
+	cursor: default;
+
+	&__image {
+		position: relative;
+		max-width: 320px;
+		max-height: 320px;
+
+		img {
+			border-radius: 32px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+		border-radius: 30px;
+		opacity: 0;
+		transition: all .2s ease-in-out;
+	}
+
+	&__text {
+		color: $white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		max-width: 200px;
+		opacity: 0;
+		transition: all .3s ease-in-out;
+	}
+
+	&:hover {
+		.slide__mask {
+			opacity: 0.6;
+		}
+
+		.slide__text {
+			opacity: 1;
+		}
+	}
+}

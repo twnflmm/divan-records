@@ -1,0 +1,1 @@
+!function(){"use strict";window.addEventListener("DOMContentLoaded",()=>{{var e=e=>document.querySelector("body").classList.add(e?"webp":"no-webp");const A=new Image;A.onload=()=>e(2===A.height),A.onerror=()=>e(2===A.height),A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"}})}();

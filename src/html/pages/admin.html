@@ -1,0 +1,27 @@
+@@include('./meta/head.html')
+
+<body>
+	@@include('./components/cabinet-header.html')
+	<main>
+		<section class="cabinet admin-cabinet">
+			<div class="container cabinet__container">
+				@@include('./components/admin-aside.html')
+				<div class="cabinet__content">
+					<h4 class="cabinet__title">Профиль</h4>
+					<div class="profile">
+						<div class="profile__image">
+							<!-- <img src="" alt="Profile Image"> -->
+						</div>
+						<div class="profile__text">
+							<h3 class="profile__username">Admin</h3>
+							<p class="profile__status">Администратор</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('meta/includeScripts.html')
+</body>
+
+</html>

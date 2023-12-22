@@ -1,0 +1,54 @@
+@@include('./meta/head.html')
+
+<body>
+	@@include('./components/cabinet-header.html')
+	<main>
+		<section class="cabinet">
+			<div class="container cabinet__container">
+				@@include('./components/admin-aside.html')
+				<div class="cabinet__content">
+					<h4 class="cabinet__title">Создать пользователя</h4>
+					<div class="create-user">
+						<form id="register" action="index.php" class="login__form modal-form" method="post">
+							<label class="modal-form__label">
+								<span>Имя</span>
+								<input id="username-register" name="username" type="text" placeholder="Иван" autocomplete="off">
+								<div class="modal-form__error"></div>
+							</label>
+							<label class="modal-form__label">
+								<span>Почта</span>
+								<input id="email-register" name="email" type="text" placeholder="mail@example.com" autocomplete="off">
+								<div class="modal-form__error"></div>
+							</label>
+							<label class="modal-form__label">
+								<span>Пароль</span>
+								<div class="modal-form__eye-wrapper">
+									<input id="password-register" name="password" type="password" placeholder="Не менее 8 символов">
+									<div class="modal-form__error"></div>
+									<span class="modal-form__eye"></span>
+								</div>
+							</label>
+							<label class="modal-form__label">
+								<span>Повтор пароля</span>
+								<input id="password2-register" name="password-confirm" type="password">
+								<div class="modal-form__error"></div>
+							</label>
+							<select id="select-register" class="create-user__select">
+								<option selected>Пользователь</option>
+								<option>Администратор</option>
+							</select>
+							<label class="modal-form__checkbox">
+								<input id="checkbox-register" type="checkbox">
+								<span class="modal-form__checkbox-text checkbox-register-text">Подтвердить создание пользователя</span>
+							</label>
+							<button id="submit-button-register" type="submit" class="modal-form__button button">Создать</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('meta/includeScripts.html')
+</body>
+
+</html>

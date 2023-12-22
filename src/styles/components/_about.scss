@@ -1,0 +1,45 @@
+.about {
+	background-color: $greenLight;
+	padding: 140px 0;
+	position: relative;
+
+	&__container {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: $small) {
+			flex-wrap: wrap;
+			gap: 15px;
+		}
+	}
+
+	&__content {
+		max-width: 530px;
+	}
+
+	&__image {
+		max-width: 505px;
+		max-height: 600px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: $small) {
+			max-width: 300px;
+			max-height: 360px;
+		}
+	}
+
+	@media (max-width: $medium) {
+		padding: 100px 0;
+	}
+
+	@media (max-width: $small) {
+		padding: 80px 0;
+	}
+}

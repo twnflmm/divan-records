@@ -1,0 +1,193 @@
+.contacts {
+	padding: 120px 0;
+
+	&__container {
+		display: flex;
+		gap: 60px;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: $medium) {
+			flex-wrap: wrap;
+			gap: 15px;
+			justify-content: center;
+		}
+	}
+
+	&__overhead {
+		@media (max-width: $medium) {
+			text-align: center;
+		}
+	}
+
+	&__title {
+		@media (max-width: $medium) {
+			text-align: center;
+		}
+	}
+
+	&__image {
+		max-width: 505px;
+		max-height: 598px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: $medium) {
+			max-width: 350px;
+			max-height: 420px;
+		}
+	}
+
+	@media (max-width: $medium) {
+		padding: 100px 0;
+	}
+
+	@media (max-width: $small) {
+		padding: 80px 0;
+	}
+}
+
+.form {
+	border-radius: 36px;
+	padding: 60px 48px;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	background-color: $primary;
+	max-width: 560px;
+	color: $white;
+
+	&__title {
+		margin-bottom: 0;
+
+		@media (max-width: $large) {
+			max-width: 280px;
+		}
+	}
+
+	&__label {
+		span {
+			display: block;
+			margin-bottom: 8px;
+
+			@media (max-width: $extraLarge) {
+				font-size: 16px;
+			}
+
+			@media (max-width: $large) {
+				margin-bottom: 6px;
+				font-size: 14px;
+			}
+
+			@media (max-width: $medium) {
+				margin-bottom: 4px;
+				font-size: 12px;
+			}
+		}
+	}
+
+	&__input {
+		border-radius: 8px;
+		padding: 20px 24px;
+		width: 100%;
+		color: $primary;
+		background-color: $mercury;
+
+		&::placeholder {
+			color: $black;
+			opacity: .3;
+
+			@media (max-width: $extraLarge) {
+				font-size: 16px;
+			}
+
+			@media (max-width: $large) {
+				font-size: 14px;
+			}
+
+			@media (max-width: $medium) {
+				font-size: 12px;
+			}
+		}
+
+		@media (max-width: $extraLarge) {
+			padding: 16px 20px;
+			font-size: 16px;
+		}
+
+		@media (max-width: $large) {
+			padding: 12px 16px;
+			font-size: 14px;
+		}
+
+		@media (max-width: $medium) {
+			padding: 10px 14px;
+			font-size: 12px;
+		}
+	}
+
+	@media (max-width: $extraLarge) {
+		gap: 20px;
+	}
+
+	@media (max-width: $small) {
+		gap: 15px;
+		padding: 42px 36px;
+	}
+}
+
+.custom-checkbox {
+	position: relative;
+
+	&__input {
+		position: absolute;
+		left: 3px;
+		bottom: 3px;
+		z-index: -1;
+
+		&:checked+label::before {
+			background: $orange url("@icons/check.svg") center / 50% no-repeat;
+		}
+	}
+
+	&__label {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		user-select: none;
+
+		&::before {
+			content: '';
+			border: 1px solid $orange;
+			border-radius: 4px;
+			flex-shrink: 0;
+			width: 18px;
+			height: 18px;
+			background-color: $mercury;
+		}
+	}
+
+	&__text {
+		line-height: 120%;
+
+		span {
+			color: $orange;
+		}
+
+		@media (max-width: $extraLarge) {
+			font-size: 16px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 14px;
+		}
+
+		@media (max-width: $medium) {
+			font-size: 12px;
+		}
+	}
+}

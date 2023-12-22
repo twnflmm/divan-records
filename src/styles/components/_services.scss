@@ -1,0 +1,135 @@
+.services {
+	padding: 180px 0;
+	background-color: $primary;
+
+	&__title {
+		color: $white;
+		text-align: center;
+	}
+
+	@media (max-width: $medium) {
+		padding: 100px 0;
+	}
+
+	@media (max-width: $small) {
+		padding: 80px 0;
+	}
+}
+
+.accord {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__item {
+		border-radius: 20px;
+		background-color: $mercury;
+		user-select: none;
+
+		&.active .accord__top span::after {
+			content: "\2796";
+		}
+	}
+
+	&__top {
+		border-radius: 20px;
+		padding: 24px;
+		cursor: pointer;
+		transition: background-color .3s;
+
+		&.active {
+			background-color: $orangeLight;
+
+			span::after {
+				content: "\2796";
+			}
+		}
+
+		&:hover {
+			background-color: $orangeLight;
+			transition: background-color .3s;
+		}
+
+		span::after {
+			content: '\02795';
+			font-size: 16px;
+			color: $black;
+			float: right;
+			margin-left: 5px;
+		}
+
+		@media (max-width: $extraLarge) {
+			font-size: 16px;
+			padding: 20px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 14px;
+			padding: 18px;
+		}
+
+		@media (max-width: $small) {
+			padding: 16px;
+		}
+	}
+
+	&__bottom {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+
+	&__bottom-inner {
+		padding: 24px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-between;
+
+
+		@media (max-width: $extraLarge) {
+			padding: 20px;
+		}
+
+		@media (max-width: $large) {
+			padding: 18px;
+		}
+
+		@media (max-width: $medium) {
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: $small) {
+			padding: 16px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		max-width: 370px;
+
+		p {
+			line-height: 120%;
+			span {
+				font-weight: 700;
+			}
+
+			@media (max-width: $extraLarge) {
+				font-size: 14px;
+			}
+		}
+
+	}
+
+	@media (max-width: $medium) {
+		flex-wrap: wrap;
+	}
+}

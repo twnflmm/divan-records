@@ -1,0 +1,99 @@
+<div class="modal">
+	<div class="modal__wrapper login">
+		<h2 class="login__title">Войти</h2>
+		<button class="modal__close-button">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="white" width="50px" height="50px">
+				<path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+			</svg>
+		</button>
+		<form id="login" action="index.php" class="login__form modal-form">
+			<label class="modal-form__label">
+				<span>Почта</span>
+				<input id="email-login" type="text" placeholder="mail@example.com" autocomplete="off">
+				<div class="modal-form__error"></div>
+			</label>
+			<label class="modal-form__label">
+				<span>Пароль</span>
+				<input id="password-login" class="modal-form__password" type="password" placeholder="********">
+				<div class="modal-form__error"></div>
+			</label>
+			<div class="modal-form__remember-forgot">
+				<label class="modal-form__checkbox">
+					<input type="checkbox">
+					<span>Запомнить меня</span>
+				</label>
+				<a id="recover-link" class="modal-form__link" href="#">Забыли пароль?</a>
+			</div>
+			<button type="submit" class="modal-form__button button">Войти</button>
+			<div class="modal-form__login-register login-register">
+				<span class="login-register__text">Нет аккаунта?</span>
+				<a class="login-register__link log-reg-link">Зарегистироваться</a>
+			</div>
+		</form>
+	</div>
+	<div class="modal__wrapper recover hidden">
+		<h2 class="recover__title">Забыли пароль?</h2>
+		<p class="recover__paragraph paragraph">
+			Введите адрес Вашей электронной почты, под которым вы зарегистрированы на сайте и мы отправим Вам информацию о
+			восстановлении пароля.
+		</p>
+		<button class="modal__close-button">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="white" width="50px" height="50px">
+				<path
+					d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+			</svg>
+		</button>
+		<form id="recover" action="#" class="recover__form modal-form">
+			<label class="modal-form__label">
+				<span>Почта</span>
+				<input id="email-recover" type="text" placeholder="mail@example.com" autocomplete="off">
+				<div class="modal-form__error"></div>
+			</label>
+			<button type="submit" class="modal-form__button button">Отправить</button>
+			<a id="recover-link-back" href="#" class="login-register__link">Назад</a>
+		</form>
+	</div>
+	<div class="modal__wrapper register hidden">
+		<h2 class="login__title">Регистрация</h2>
+		<button class="modal__close-button">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="white" width="50px" height="50px">
+				<path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+			</svg>
+		</button>
+		<form id="register" action="index.php" class="login__form modal-form" method="post">
+			<label class="modal-form__label">
+				<span>Имя</span>
+				<input id="username-register" name="username" type="text" placeholder="Иван" autocomplete="off">
+				<div class="modal-form__error"></div>
+			</label>
+			<label class="modal-form__label">
+				<span>Почта</span>
+				<input id="email-register" name="email" type="text" placeholder="mail@example.com" autocomplete="off">
+				<div class="modal-form__error"></div>
+			</label>
+			<label class="modal-form__label">
+				<span>Пароль</span>
+				<div class="modal-form__eye-wrapper">
+					<input id="password-register" name="password" type="password" placeholder="Не менее 8 символов">
+					<div class="modal-form__error"></div>
+					<span class="modal-form__eye"></span>
+				</div>
+			</label>
+			<label class="modal-form__label">
+				<span>Повтор пароля</span>
+				<input id="password2-register" name="password-confirm" type="password">
+				<div class="modal-form__error"></div>
+			</label>
+			<label class="modal-form__checkbox">
+				<input id="checkbox-register" type="checkbox">
+				<span class="modal-form__checkbox-text checkbox-register-text">Я ознакомлен(-а) с Политикой
+					конфиденциальности</span>
+			</label>
+			<button id="submit-button-register" type="submit" class="modal-form__button button">Зарегистироваться</button>
+			<div class="modal-form__login-register login-register">
+				<span class="login-register__text">Уже есть аккаунт?</span>
+				<a class="login-register__link log-reg-link">Войти</a>
+			</div>
+		</form>
+	</div>
+</div>
